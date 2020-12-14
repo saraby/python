@@ -1,4 +1,9 @@
+""" 
+Group 1. Collaboration with Klara, Marije, Sarab.
 
+"""
+
+import collections
 
 def get_word_counts(docs):
 
@@ -10,5 +15,9 @@ def get_word_counts(docs):
     1) you have to use Collections
     2) you have 4 lines of code, including return statement
     """
-    pass
 
+    return collections.Counter([w for doc in docs for w in doc])
+
+if __name__ == "__main__":
+    docs = [['w1','w2'], ['w4','w2','w3','w1']]
+    print(get_word_counts(docs))
